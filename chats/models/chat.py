@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import ManyToManyField, CASCADE
 
 
 class Group(models.Model):
@@ -8,3 +9,4 @@ class Group(models.Model):
     username = models.CharField(max_length=32, unique=True, blank=True, null=True)
     is_private = models.BooleanField(default=False)
     owner = models.ForeignKey('users.User', models.SET_NULL, null=True, blank=True)
+    users = ManyToManyField('users.User', CASCADE)
