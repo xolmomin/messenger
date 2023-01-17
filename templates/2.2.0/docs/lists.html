@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<!-- Mirrored from offsetcode.com/themes/messenger/2.2.0/docs/lists.html by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 13 Oct 2022 01:01:22 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <title>Messenger - 2.0.0</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
+
+	<!-- Font -->
+	<link rel="preconnect" href="../../../../../external.html?link=https://fonts.gstatic.com/">
+	<link href="../../../../../external.html?link=https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/template.bundle.css">
+    <link rel="stylesheet" href="../assets/css/template.dark.bundle.css" media="(prefers-color-scheme: dark)">
+
+    <!-- Docs CSS -->
+    <link rel="stylesheet" href="../assets/css/docs.bundle.css">
+
+    <style>
+/*
+
+Name:       Base16 Atelier Sulphurpool Light
+Author:     Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool)
+
+Prism template by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/prism/)
+Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+code[class*="language-"],
+pre[class*="language-"] {
+	font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+	font-size: 14px;
+	line-height: 1.375;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+	color: #5e6687;
+}
+
+pre > code[class*="language-"] {
+	font-size: 1em;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #dfe2f1;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #dfe2f1;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #898ea4;
+}
+
+.token.punctuation {
+	color: #5e6687;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.operator,
+.token.boolean,
+.token.number {
+	color: #c76b29;
+}
+
+.token.property {
+	color: #c08b30;
+}
+
+.token.tag {
+	color: #3d8fd1;
+}
+
+.token.string {
+	color: #22a2c9;
+}
+
+.token.selector {
+	color: #6679cc;
+}
+
+.token.attr-name {
+	color: #c76b29;
+}
+
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #22a2c9;
+}
+
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+	color: #ac9739;
+}
+
+.token.statement,
+.token.regex,
+.token.atrule {
+	color: #22a2c9;
+}
+
+.token.placeholder,
+.token.variable {
+	color: #3d8fd1;
+}
+
+.token.deleted {
+	text-decoration: line-through;
+}
+
+.token.inserted {
+	border-bottom: 1px dotted #202746;
+	text-decoration: none;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.important {
+	color: #c94922;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+pre > code.highlight {
+	outline: 0.4em solid #c94922;
+	outline-offset: .4em;
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+	border-right-color: #dfe2f1;
+}
+
+.line-numbers-rows > span:before {
+	color: #979db4;
+}
+
+/* overrides color-values for the Line Highlight plugin
+ * http://prismjs.com/plugins/line-highlight/
+ */
+.line-highlight {
+	background: rgba(107, 115, 148, 0.2);
+	background: -webkit-linear-gradient(left, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
+	background: linear-gradient(to right, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
+}
+    </style>
+</head>
+<body class="doc-body" data-bs-spy="scroll" data-bs-target="#docs-sub-navigation">
+
+    <!-- Nav -->
+    <div class="container border-bottom py-6 px-0" style="max-width: 1200px;">
+        <div class="row justify-content-between align-items-center gx-0">
+
+            <div class="col">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="#">
+                        <svg version="1.1" width="46px" height="46px" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 46 46" enable-background="new 0 0 46 46" xml:space="preserve">
+                            <polygon opacity="0.7" points="45,11 36,11 35.5,1 "/>
+                            <polygon points="35.5,1 25.4,14.1 39,21 "/>
+                            <polygon opacity="0.4" points="17,9.8 39,21 17,26 "/>
+                            <polygon opacity="0.7" points="2,12 17,26 17,9.8 "/>
+                            <polygon opacity="0.7" points="17,26 39,21 28,36 "/>
+                            <polygon points="28,36 4.5,44 17,26 "/>
+                            <polygon points="17,26 1,26 10.8,20.1 "/>
+                        </svg>
+
+                    </a>
+
+                    <ul class="list-inline mb-0 ms-5">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-reset text-decoration-underline">Support: support@offsetcode.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-auto">
+
+                <div class="text-end d-flex align-items-center">
+
+
+                    <a href="../index-2.html" class="btn btn-soft-primary d-flex align-items-center" style="font-weight: 500;">
+                        Live Preview
+
+                        <span class="icon ms-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="doc-layout">
+
+        <!-- Sidebar -->
+        <div class="doc-sidebar border-end">
+            <div class="position-sticky top-0">
+
+                <div class="py-5" style="overflow-y: auto; height: 100vh;">
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Welcome</h6>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="index.html">Introduction</a>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="changelog.html">Changelog
+                                    <span class="badge bg-soft-primary text-primary align-top ms-2">2.2.0</span>
+                                </a>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="themes.html">Themes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Content</h6>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="typography.html">Typography</a>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="tables.html">Tables</a>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="icons.html">Icons</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Components</h6>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="accordion.html">Accordion</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="alerts.html">Alerts</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="avatar.html">Avatars</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="badge.html">Badges</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="buttons.html">Buttons</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="cards.html">Cards</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="collapse.html">Collapse</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="dropdowns.html">Dropdowns</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="forms.html">Forms</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="lists.html">List group</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="modal.html">Modal</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="navs.html">Navs</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="progress.html">Progress</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="toasts.html">Toasts</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Plugins</h6>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="autosize.html">Autosize</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="dropzonejs.html">Dropzone</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="emoji.html">Emoji</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="zoom-vanilla.html">Zoom-vanilla.js</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Pages</h6>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/index.html">Home</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/chat-group.html">Chat - Group</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/chat-direct.html">Chat - Direct</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/chat-empty.html">
+                                    Empty State
+                                    <span class="badge bg-soft-primary text-primary align-top ms-2">New</span>
+                                </a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/password-reset.html">Password Reset</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/lockscreen.html">
+                                    Look Screen
+                                    <span class="badge bg-soft-primary text-primary align-top ms-2">New</span>
+                                </a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/signup.html">Sign Up</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/signup.html">Sign In</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main -->
+        <div class="doc-content flex-1 py-10 px-10">
+
+            <header class="pb-10 mb-10 border-bottom">
+                <h1 class="display-1">List group</h1>
+                <p class="lead">List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.</p>
+                <p class="lead"><a href="../../../../../external.html?link=https://getbootstrap.com/docs/5.0/components/list-group/" target="_blank">Bootstrap documentation →</a></p>
+            </header>
+
+            <h3 class="display-2" data-create-link="#">Basic example</h3>
+            <p>The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</p>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="bg-light rounded-top p-8">
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <ul class="list-group">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item">A fourth item</li>
+                                <li class="list-group-item">And a fifth one</li>
+                            </ul>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h3 class="display-2" data-create-link="#">Active items</h3>
+            <p>Add <code>.active</code> to a <code>.list-group-item</code> to indicate the current active selection.</p>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="bg-light rounded-top p-8">
+                    <ul class="list-group">
+                        <li class="list-group-item active" aria-current="true">An active item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <ul class="list-group">
+                                <li class="list-group-item active" aria-current="true">An active item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item">A fourth item</li>
+                                <li class="list-group-item">And a fifth one</li>
+                            </ul>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h3 class="display-2" data-create-link="#">Flush</h3>
+            <p>Add <code>.list-group-flush</code> to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).</p>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="border rounded-top p-8">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item">A fourth item</li>
+                                <li class="list-group-item">And a fifth one</li>
+                            </ul>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h3 class="display-2" data-create-link="#">Contextual classes</h3>
+            <p>Use contextual classes to style list items with a stateful background and color.</p>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="border rounded-top p-8">
+                    <ul class="list-group">
+                        <li class="list-group-item">A simple default list group item</li>
+                        <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                        <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                        <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                        <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                        <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                        <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                        <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                    </ul>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <ul class="list-group">
+                                <li class="list-group-item">A simple default list group item</li>
+                                <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                                <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                                <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                                <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                                <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                                <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                                <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                                <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                            </ul>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h3 class="display-2" data-create-link="#">With badges</h3>
+            <p>Add badges to any list group item to show unread counts, activity, and more with the help of some utilities.</p>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="bg-light rounded-top p-8">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            A list item
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            A second list item
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            A third list item
+                            <span class="badge bg-primary rounded-pill">1</span>
+                        </li>
+                    </ul>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    A list item
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    A second list item
+                                    <span class="badge bg-primary rounded-pill">2</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    A third list item
+                                    <span class="badge bg-primary rounded-pill">1</span>
+                                </li>
+                            </ul>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h3 class="display-2" data-create-link="#">Custom content</h3>
+            <p>Add nearly any HTML within, even for linked list groups like the one below, <br> with the help of flexbox utilities.</p>
+
+            <hr class="my-10">
+
+            <h4 class="display-3" data-create-link="#">Files</h4>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="border rounded-top p-8">
+                    <ul class="list-group list-group-flush">
+
+                        <!-- Item -->
+                        <li class="list-group-item">
+                            <div class="row align-items-center gx-5">
+                                <!-- Icons -->
+                                <div class="col-auto">
+                                    <div class="avatar-group">
+                                        <a href="#" class="avatar avatar-sm" title="William Pearson">
+                                            <img class="avatar-img" src="../assets/img/avatars/6.jpg" alt="#">
+                                        </a>
+
+                                        <a href="#" class="avatar avatar-sm">
+                                            <span class="avatar-text bg-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Icons -->
+
+                                <!-- Text -->
+                                <div class="col overflow-hidden">
+                                    <h5 class="text-truncate">
+                                        <a href="#">E5419783-047D-4B4C-B30E-F24DD8247731.JPG</a>
+                                    </h5>
+                                    <ul class="list-inline m-0">
+                                        <li class="list-inline-item">
+                                            <small class="text-uppercase text-muted">79.2 KB</small>
+                                        </li>
+
+                                        <li class="list-inline-item">
+                                            <small class="text-uppercase text-muted">txt</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Text -->
+
+                                <!-- Dropdown -->
+                                <div class="col-auto">
+                                    <div class="dropdown">
+                                        <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                                    Download
+                                                    <div class="icon ms-auto">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                                    <span class="me-auto">Delete</span>
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Dropdown -->
+                            </div>
+                        </li>
+                        <!-- Item end -->
+
+                        <!-- Item -->
+                        <li class="list-group-item">
+                            <div class="row align-items-center gx-5">
+                                <!-- Icons -->
+                                <div class="col-auto">
+                                    <div class="avatar-group">
+                                        <a href="#" class="avatar avatar-sm" title="William Pearson">
+                                            <img class="avatar-img" src="../assets/img/avatars/9.jpg" alt="#">
+                                        </a>
+
+                                        <a href="#" class="avatar avatar-sm">
+                                            <span class="avatar-text bg-primary">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Icons -->
+
+                                <!-- Text -->
+                                <div class="col overflow-hidden">
+                                    <h5 class="text-truncate">
+                                        <a href="#">E5419783-047D-4B4C-B30E-F24DD8247731.JPG</a>
+                                    </h5>
+                                    <ul class="list-inline m-0">
+                                        <li class="list-inline-item">
+                                            <small class="text-uppercase text-muted">79.2 KB</small>
+                                        </li>
+
+                                        <li class="list-inline-item">
+                                            <small class="text-uppercase text-muted">txt</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Text -->
+
+                                <!-- Dropdown -->
+                                <div class="col-auto">
+                                    <div class="dropdown">
+                                        <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                                    Download
+                                                    <div class="icon ms-auto">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                                    <span class="me-auto">Delete</span>
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Dropdown -->
+                            </div>
+                        </li>
+                        <!-- Item end -->
+                    </ul>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <ul class="list-group list-group-flush">
+
+                                ...
+
+                                <!-- Item -->
+                                <li class="list-group-item">
+                                    <div class="row align-items-center gx-5">
+                                        <!-- Icons -->
+                                        <div class="col-auto">
+                                            <div class="avatar-group">
+                                                <a href="#" class="avatar avatar-sm" title="William Pearson">
+                                                    <img class="avatar-img" src="../assets/img/avatars/6.jpg" alt="#">
+                                                </a>
+
+                                                <a href="#" class="avatar avatar-sm">
+                                                    <span class="avatar-text bg-primary">
+                                                        <img src="../assets/img/icons/file-text.svg" data-svg="" alt="">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- Icons -->
+
+                                        <!-- Text -->
+                                        <div class="col overflow-hidden">
+                                            <h5 class="text-truncate">
+                                                <a href="#">E5419783-047D-4B4C-B30E-F24DD8247731.JPG</a>
+                                            </h5>
+                                            <ul class="list-inline m-0">
+                                                <li class="list-inline-item">
+                                                    <small class="text-uppercase text-muted">79.2 KB</small>
+                                                </li>
+
+                                                <li class="list-inline-item">
+                                                    <small class="text-uppercase text-muted">txt</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Text -->
+
+                                        <!-- Dropdown -->
+                                        <div class="col-auto">
+                                            <div class="dropdown">
+                                                <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <img src="../assets/img/icons/more-vertical.svg" data-svg="" alt="">
+                                                </a>
+
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            Download
+                                                            <div class="icon ms-auto">
+                                                                <img src="../assets/img/icons/download.svg" data-svg="" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li>
+                                                        <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                                            <span class="me-auto">Delete</span>
+                                                            <div class="icon">
+                                                                <img src="../assets/img/icons/trash-2.svg" data-svg="" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Dropdown -->
+                                    </div>
+                                </li>
+                                <!-- Item end -->
+
+                                ...
+
+                            </ul>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h4 class="display-3" data-create-link="#">Users</h4>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="border rounded-top p-8">
+                    <ul class="list-group list-group-flush">
+                        <!-- Item -->
+                        <li class="list-group-item">
+                            <div class="row align-items-center gx-5">
+                                <!-- Avatar -->
+                                <div class="col-auto">
+                                    <a href="#" class="avatar avatar-online">
+                                        <img class="avatar-img" src="../assets/img/avatars/11.jpg" alt="">
+                                    </a>
+                                </div>
+                                <!-- Avatar -->
+
+                                <!-- Text -->
+                                <div class="col">
+                                    <h5><a href="#">Mila White</a></h5>
+                                    <p>online</p>
+                                </div>
+                                <!-- Text -->
+
+                                <!-- Dropdown -->
+                                <div class="col-auto">
+                                    <div class="dropdown">
+                                        <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                                    Promote
+                                                    <div class="icon ms-auto">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                                    Restrict
+                                                    <div class="icon ms-auto">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-down"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                                    Delete
+                                                    <div class="icon ms-auto">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Dropdown -->
+                            </div>
+                        </li>
+                        <!-- Item end -->
+
+                        <!-- Item -->
+                        <li class="list-group-item">
+                            <div class="row align-items-center gx-5">
+                                <!-- Avatar -->
+                                <div class="col-auto">
+                                    <a href="#" class="avatar avatar-online">
+                                        <img class="avatar-img" src="../assets/img/avatars/1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <!-- Avatar -->
+
+                                <!-- Text -->
+                                <div class="col">
+                                    <h5><a href="#">Don Knight</a></h5>
+                                    <p>online</p>
+                                </div>
+                                <!-- Text -->
+
+                                <!-- Dropdown -->
+                                <div class="col-auto">
+                                    <div class="dropdown">
+                                        <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                                    Promote
+                                                    <div class="icon ms-auto">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                                    Restrict
+                                                    <div class="icon ms-auto">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-down"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline><polyline points="17 18 23 18 23 12"></polyline></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                                    Delete
+                                                    <div class="icon ms-auto">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Dropdown -->
+                            </div>
+                        </li>
+                        <!-- Item end -->
+                    </ul>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <ul class="list-group list-group-flush">
+
+                                ...
+
+                                <!-- Item -->
+                                <li class="list-group-item">
+                                    <div class="row align-items-center gx-5">
+                                        <!-- Avatar -->
+                                        <div class="col-auto">
+                                            <a href="#" class="avatar avatar-online">
+                                                <img class="avatar-img" src="../assets/img/avatars/11.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <!-- Avatar -->
+
+                                        <!-- Text -->
+                                        <div class="col">
+                                            <h5><a href="#">Mila White</a></h5>
+                                            <p>online</p>
+                                        </div>
+                                        <!-- Text -->
+
+                                        <!-- Dropdown -->
+                                        <div class="col-auto">
+                                            <div class="dropdown">
+                                                <a class="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <img src="../assets/img/icons/more-vertical" data-svg="" alt="">
+                                                </a>
+
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            Promote
+                                                            <div class="icon ms-auto">
+                                                                <img src="../assets/img/icons/more-vertical.svg" data-svg="" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                                            Restrict
+                                                            <div class="icon ms-auto">
+                                                                <img src="../assets/img/icons/trending-down.svg" data-svg="" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li>
+                                                        <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                                                            Delete
+                                                            <div class="icon ms-auto">
+                                                                <img src="../assets/img/icons/trash-2.svg" data-svg="" alt="">
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- Dropdown -->
+                                    </div>
+                                </li>
+                                <!-- Item end -->
+
+                                ...
+
+                            </ul>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+        </div>
+        <!-- Main -->
+
+        <!-- Sidebar -->
+        <div class="doc-sidebar border-start">
+            <div class="position-sticky top-0 py-5 ps-8">
+
+                <nav class="mt-8 p-0">
+                    <ul id="docs-sub-navigation" class="list-unstyled">
+                        <li class="list-item my-4">
+                            <h6 class="text-reset opacity-50 m-0">Jump to</h6>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/vendor.js"></script>
+    <script src="../assets/js/template.js"></script>
+    <script src="../../../../../cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-core.min.js"></script>
+    <script src="../../../../../cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="../../../../../cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+
+    <script>
+        "use strict";
+
+        const quickLinks = document.querySelectorAll('[data-create-link]');
+        const target     = document.querySelector('#docs-sub-navigation');
+
+        quickLinks.forEach(element => {
+            let text     = element.textContent;
+            //console.log(element.tagName);
+            let ms;
+            if (element.tagName == "H4") {
+                ms = "ms-4";
+            } else {
+                ms = "";
+            }
+            //console.log(element.tagName);
+            let textHash = text.replace(/:/g, '_').replace(/ /g, '_');
+            element.id   = textHash;
+            target.innerHTML = target.innerHTML + `<li class="list-item my-4 ${ms}"><a href="#${textHash}" class="text-reset">${text}</a></li>`;
+        });
+    </script>
+
+</body>
+
+<!-- Mirrored from offsetcode.com/themes/messenger/2.2.0/docs/lists.html by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 13 Oct 2022 01:01:22 GMT -->
+</html>

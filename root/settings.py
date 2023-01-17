@@ -25,6 +25,8 @@ INSTALLED_APPS = [
 
     # My apps
     'chats.apps.ChatsConfig',
+    'users.apps.UsersConfig',
+    'shared.apps.SharedConfig',
 
     # Third-party apps
 ]

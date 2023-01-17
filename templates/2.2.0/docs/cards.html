@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<!-- Mirrored from offsetcode.com/themes/messenger/2.2.0/docs/cards.html by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 13 Oct 2022 01:01:21 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <title>Messenger - 2.0.0</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" type="image/x-icon">
+
+	<!-- Font -->
+	<link rel="preconnect" href="../../../../../external.html?link=https://fonts.gstatic.com/">
+	<link href="../../../../../external.html?link=https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/template.bundle.css">
+    <link rel="stylesheet" href="../assets/css/template.dark.bundle.css" media="(prefers-color-scheme: dark)">
+
+    <!-- Docs CSS -->
+    <link rel="stylesheet" href="../assets/css/docs.bundle.css">
+
+    <style>
+/*
+
+Name:       Base16 Atelier Sulphurpool Light
+Author:     Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool)
+
+Prism template by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/prism/)
+Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+code[class*="language-"],
+pre[class*="language-"] {
+	font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+	font-size: 14px;
+	line-height: 1.375;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+	color: #5e6687;
+}
+
+pre > code[class*="language-"] {
+	font-size: 1em;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #dfe2f1;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #dfe2f1;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #898ea4;
+}
+
+.token.punctuation {
+	color: #5e6687;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.operator,
+.token.boolean,
+.token.number {
+	color: #c76b29;
+}
+
+.token.property {
+	color: #c08b30;
+}
+
+.token.tag {
+	color: #3d8fd1;
+}
+
+.token.string {
+	color: #22a2c9;
+}
+
+.token.selector {
+	color: #6679cc;
+}
+
+.token.attr-name {
+	color: #c76b29;
+}
+
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #22a2c9;
+}
+
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+	color: #ac9739;
+}
+
+.token.statement,
+.token.regex,
+.token.atrule {
+	color: #22a2c9;
+}
+
+.token.placeholder,
+.token.variable {
+	color: #3d8fd1;
+}
+
+.token.deleted {
+	text-decoration: line-through;
+}
+
+.token.inserted {
+	border-bottom: 1px dotted #202746;
+	text-decoration: none;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.important {
+	color: #c94922;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+pre > code.highlight {
+	outline: 0.4em solid #c94922;
+	outline-offset: .4em;
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+	border-right-color: #dfe2f1;
+}
+
+.line-numbers-rows > span:before {
+	color: #979db4;
+}
+
+/* overrides color-values for the Line Highlight plugin
+ * http://prismjs.com/plugins/line-highlight/
+ */
+.line-highlight {
+	background: rgba(107, 115, 148, 0.2);
+	background: -webkit-linear-gradient(left, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
+	background: linear-gradient(to right, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
+}
+    </style>
+</head>
+<body class="doc-body" data-bs-spy="scroll" data-bs-target="#docs-sub-navigation">
+
+    <!-- Nav -->
+    <div class="container border-bottom py-6 px-0" style="max-width: 1200px;">
+        <div class="row justify-content-between align-items-center gx-0">
+
+            <div class="col">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="#">
+                        <svg version="1.1" width="46px" height="46px" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 46 46" enable-background="new 0 0 46 46" xml:space="preserve">
+                            <polygon opacity="0.7" points="45,11 36,11 35.5,1 "/>
+                            <polygon points="35.5,1 25.4,14.1 39,21 "/>
+                            <polygon opacity="0.4" points="17,9.8 39,21 17,26 "/>
+                            <polygon opacity="0.7" points="2,12 17,26 17,9.8 "/>
+                            <polygon opacity="0.7" points="17,26 39,21 28,36 "/>
+                            <polygon points="28,36 4.5,44 17,26 "/>
+                            <polygon points="17,26 1,26 10.8,20.1 "/>
+                        </svg>
+
+                    </a>
+
+                    <ul class="list-inline mb-0 ms-5">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-reset text-decoration-underline">Support: support@offsetcode.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-auto">
+
+                <div class="text-end d-flex align-items-center">
+
+
+                    <a href="../index-2.html" class="btn btn-soft-primary d-flex align-items-center" style="font-weight: 500;">
+                        Live Preview
+
+                        <span class="icon ms-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="doc-layout">
+
+        <!-- Sidebar -->
+        <div class="doc-sidebar border-end">
+            <div class="position-sticky top-0">
+
+                <div class="py-5" style="overflow-y: auto; height: 100vh;">
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Welcome</h6>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="index.html">Introduction</a>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="changelog.html">Changelog
+                                    <span class="badge bg-soft-primary text-primary align-top ms-2">2.2.0</span>
+                                </a>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="themes.html">Themes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Content</h6>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="typography.html">Typography</a>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="tables.html">Tables</a>
+                            </li>
+
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="icons.html">Icons</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Components</h6>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="accordion.html">Accordion</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="alerts.html">Alerts</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="avatar.html">Avatars</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="badge.html">Badges</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="buttons.html">Buttons</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="cards.html">Cards</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="collapse.html">Collapse</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="dropdowns.html">Dropdowns</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="forms.html">Forms</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="lists.html">List group</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="modal.html">Modal</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="navs.html">Navs</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="progress.html">Progress</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="toasts.html">Toasts</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Plugins</h6>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="autosize.html">Autosize</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="dropzonejs.html">Dropzone</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="emoji.html">Emoji</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="zoom-vanilla.html">Zoom-vanilla.js</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8">
+                        <ul class="list-unstyled">
+                            <li class="list-item my-4">
+                                <h6 class="text-reset opacity-50 m-0">Pages</h6>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/index.html">Home</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/chat-group.html">Chat - Group</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/chat-direct.html">Chat - Direct</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/chat-empty.html">
+                                    Empty State
+                                    <span class="badge bg-soft-primary text-primary align-top ms-2">New</span>
+                                </a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/password-reset.html">Password Reset</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/lockscreen.html">
+                                    Look Screen
+                                    <span class="badge bg-soft-primary text-primary align-top ms-2">New</span>
+                                </a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/signup.html">Sign Up</a>
+                            </li>
+                            <li class="list-item my-4">
+                                <a class="text-reset" href="../../../../../external.html?link=https://offsetcode.com/themes/messenger/signup.html">Sign In</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main -->
+        <div class="doc-content flex-1 py-10 px-10">
+
+            <header class="pb-10 mb-10 border-bottom">
+                <h1 class="display-1">Cards</h1>
+                <p class="lead">Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.</p>
+                <p class="lead"><a href="../../../../../external.html?link=https://getbootstrap.com/docs/5.0/components/card/" target="_blank">Bootstrap documentation →</a></p>
+            </header>
+
+            <h3 class="display-2" data-create-link="#">Examples</h3>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="bg-light rounded-top p-8">
+                    <div class="card" style="width: 20rem;">
+                        <img src="../assets/img/demos/light.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title">Card Title</h4>
+                            <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card Title</h4>
+                                    <p class="card-text">This card has a regular title and short paragraphy of text below it.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h3 class="display-2" data-create-link="#">Header and footer</h3>
+            <p>Add an optional header and/or footer within a card.</p>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="bg-light rounded-top p-8">
+                    <div class="card">
+                        <div class="card-header">
+                            Featured
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Special Title</h4>
+                            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            2 days ago
+                        </div>
+                    </div>
+                </div>
+                <pre class="bg-dark hide-scrollbar rounded-bottom doc-code-example m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <div class="card">
+                                <div class="card-header">
+                                    Featured
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Special Title</h4>
+                                    <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    2 days ago
+                                </div>
+                            </div>
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h3 class="display-2" data-create-link="#">Custom Content</h3>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="bg-light rounded-top p-8">
+                    <!-- Card -->
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <div class="row gx-5">
+
+                                <div class="col-auto">
+                                    <!-- Avatar -->
+                                    <div class="avatar-group-trigon avatar-group-trigon-sm">
+                                        <div class="avatar avatar-sm">
+                                            <img class="avatar-img" src="../assets/img/avatars/7.jpg" alt="#">
+                                        </div>
+                                        <div class="avatar avatar-sm">
+                                            <img class="avatar-img" src="../assets/img/avatars/9.jpg" alt="#">
+                                        </div>
+                                        <div class="avatar avatar-sm">
+                                            <span class="avatar-text bg-primary">D</span>
+                                        </div>
+                                    </div>
+                                    <!-- Avatar -->
+                                </div>
+
+                                <div class="col">
+                                    <!-- Title -->
+                                    <div class="d-flex mb-3">
+                                        <h5 class="me-auto mb-0">Don Knight</h5>
+                                        <span class="text-muted extra-small ms-2">08:35 PM</span>
+                                    </div>
+                                    <!-- Title -->
+
+                                    <!-- Text -->
+                                    <div class="d-flex align-items-center">
+                                        <div class="line-clamp me-auto">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</div>
+
+                                        <!-- Badge -->
+                                        <div class="badge badge-circle bg-primary ms-5">
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                    <!-- Text -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <pre class="bg-dark hide-scrollbar doc-code-example rounded-bottom m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <!-- Card -->
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <div class="row gx-5">
+
+                                        <div class="col-auto">
+                                            <!-- Avatar -->
+                                            <div class="avatar-group-trigon avatar-group-trigon-sm">
+                                                <div class="avatar avatar-sm">
+                                                    <img class="avatar-img" src="../assets/img/avatars/7.jpg" alt="#">
+                                                </div>
+                                                <div class="avatar avatar-sm">
+                                                    <img class="avatar-img" src="../assets/img/avatars/9.jpg" alt="#">
+                                                </div>
+                                                <div class="avatar avatar-sm">
+                                                    <span class="avatar-text bg-primary">D</span>
+                                                </div>
+                                            </div>
+                                            <!-- Avatar -->
+                                        </div>
+
+                                        <div class="col">
+                                            <!-- Title -->
+                                            <div class="d-flex mb-3">
+                                                <h5 class="me-auto mb-0">Don Knight</h5>
+                                                <span class="text-muted extra-small ms-2">08:35 PM</span>
+                                            </div>
+                                            <!-- Title -->
+
+                                            <!-- Text -->
+                                            <div class="d-flex align-items-center">
+                                                <div class="line-clamp me-auto">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</div>
+
+                                                <!-- Badge -->
+                                                <div class="badge badge-circle bg-primary ms-5">
+                                                    <span>5</span>
+                                                </div>
+                                            </div>
+                                            <!-- Text -->
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Card -->
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+            <h3 class="display-2" data-create-link="#">Profile</h3>
+
+            <!-- Example -->
+            <article class="my-10">
+                <div class="bg-light rounded-top p-8">
+                    <!-- Card -->
+                    <div class="card border-0">
+                        <div class="profile">
+                            <div class="profile-img rounded-top text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 400 140.74"><defs><style>.cls-2{fill:#fff;opacity:0.1;}</style></defs><g><g><path d="M400,125A1278.49,1278.49,0,0,1,0,125V0H400Z"/><path class="cls-2" d="M361.13,128c.07.83.15,1.65.27,2.46h0Q380.73,128,400,125V87l-1,0a38,38,0,0,0-38,38c0,.86,0,1.71.09,2.55C361.11,127.72,361.12,127.88,361.13,128Z"/><path class="cls-2" d="M12.14,119.53c.07.79.15,1.57.26,2.34v0c.13.84.28,1.66.46,2.48l.07.3c.18.8.39,1.59.62,2.37h0q33.09,4.88,66.36,8,.58-1,1.09-2l.09-.18a36.35,36.35,0,0,0,1.81-4.24l.08-.24q.33-.94.6-1.9l.12-.41a36.26,36.26,0,0,0,.91-4.42c0-.19,0-.37.07-.56q.11-.86.18-1.73c0-.21,0-.42,0-.63,0-.75.08-1.51.08-2.28a36.5,36.5,0,0,0-73,0c0,.83,0,1.64.09,2.45C12.1,119.15,12.12,119.34,12.14,119.53Z"/><circle class="cls-2" cx="94.5" cy="57.5" r="22.5"/><path class="cls-2" d="M276,0a43,43,0,0,0,43,43A43,43,0,0,0,362,0Z"/></g></g></svg>
+                            </div>
+
+                            <div class="profile-body">
+                                <div class="avatar avatar-xl border border-4 border-body">
+                                    <img class="avatar-img" src="../assets/img/avatars/1.jpg" alt="">
+                                </div>
+
+                                <h4 class="mb-1">William Wright</h4>
+                                <p>last seen 5 minutes ago</p>
+                            </div>
+
+                            <div class="card-body border-top">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center gx-6">
+                                            <div class="col">
+                                                <h5>Location</h5>
+                                                <p>USA, Houston</p>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <div class="btn btn-sm btn-icon btn-dark">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center gx-6">
+                                            <div class="col">
+                                                <h5>E-mail</h5>
+                                                <p>william@studio.com</p>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <div class="btn btn-sm btn-icon btn-dark">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <pre class="bg-dark hide-scrollbar doc-code-example rounded-bottom m-0 p-8">
+                    <code class="language-markup">
+                        <script type="prism-html-markup">
+                            <!-- Card -->
+                            <div class="card border-0">
+                                <div class="profile">
+                                    <div class="profile-img rounded-top text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 400 140.74"><defs><style>.cls-2{fill:#fff;opacity:0.1;}</style></defs><g><g><path d="M400,125A1278.49,1278.49,0,0,1,0,125V0H400Z"/><path class="cls-2" d="M361.13,128c.07.83.15,1.65.27,2.46h0Q380.73,128,400,125V87l-1,0a38,38,0,0,0-38,38c0,.86,0,1.71.09,2.55C361.11,127.72,361.12,127.88,361.13,128Z"/><path class="cls-2" d="M12.14,119.53c.07.79.15,1.57.26,2.34v0c.13.84.28,1.66.46,2.48l.07.3c.18.8.39,1.59.62,2.37h0q33.09,4.88,66.36,8,.58-1,1.09-2l.09-.18a36.35,36.35,0,0,0,1.81-4.24l.08-.24q.33-.94.6-1.9l.12-.41a36.26,36.26,0,0,0,.91-4.42c0-.19,0-.37.07-.56q.11-.86.18-1.73c0-.21,0-.42,0-.63,0-.75.08-1.51.08-2.28a36.5,36.5,0,0,0-73,0c0,.83,0,1.64.09,2.45C12.1,119.15,12.12,119.34,12.14,119.53Z"/><circle class="cls-2" cx="94.5" cy="57.5" r="22.5"/><path class="cls-2" d="M276,0a43,43,0,0,0,43,43A43,43,0,0,0,362,0Z"/></g></g></svg>
+                                    </div>
+
+                                    <div class="profile-body">
+                                        <div class="avatar avatar-xl border border-4 border-body">
+                                            <img class="avatar-img" src="assets/img/avatars/1.jpg" alt="">
+                                        </div>
+
+                                        <h4 class="mb-1">William Wright</h4>
+                                        <p>last seen 5 minutes ago</p>
+                                    </div>
+
+                                    <div class="card-body border-top">
+                                       ...
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                        </script>
+                    </code>
+                </pre>
+            </article>
+            <!-- Example -->
+
+        </div>
+        <!-- Main -->
+
+        <!-- Sidebar -->
+        <div class="doc-sidebar border-start">
+            <div class="position-sticky top-0 py-5 ps-8">
+
+                <nav class="mt-8 p-0">
+                    <ul id="docs-sub-navigation" class="list-unstyled">
+                        <li class="list-item my-4">
+                            <h6 class="text-reset opacity-50 m-0">Jump to</h6>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/vendor.js"></script>
+    <script src="../assets/js/template.js"></script>
+    <script src="../../../../../cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/components/prism-core.min.js"></script>
+    <script src="../../../../../cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="../../../../../cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+
+    <script>
+        "use strict";
+
+        const quickLinks = document.querySelectorAll('[data-create-link]');
+        const target     = document.querySelector('#docs-sub-navigation');
+
+        quickLinks.forEach(element => {
+            let text     = element.textContent;
+            //console.log(element.tagName);
+            let ms;
+            if (element.tagName == "H4") {
+                ms = "ms-4";
+            } else {
+                ms = "";
+            }
+            //console.log(element.tagName);
+            let textHash = text.replace(/:/g, '_').replace(/ /g, '_');
+            element.id   = textHash;
+            target.innerHTML = target.innerHTML + `<li class="list-item my-4 ${ms}"><a href="#${textHash}" class="text-reset">${text}</a></li>`;
+        });
+    </script>
+
+</body>
+
+<!-- Mirrored from offsetcode.com/themes/messenger/2.2.0/docs/cards.html by HTTrack Website Copier/3.x [XR&CO'2017], Thu, 13 Oct 2022 01:01:22 GMT -->
+</html>
