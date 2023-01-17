@@ -1,0 +1,49 @@
+{% extends 'users/auth/base.html' %}
+{% load static %}
+{% block main_content %}
+    <div class="row align-items-center justify-content-center min-vh-100 gx-0">
+
+        <div class="col-12 col-md-5 col-lg-4">
+
+            <div class="card card-shadow border-0">
+                <div class="card-body position-relative pt-0 mb-6">
+                    <div class="position-absolute top-0 start-50 translate-middle">
+                        <a href="#" class="avatar avatar-xl mx-auto border border-light border-5">
+                            <img src="{% static 'assets/img/avatars/1.jpg' %}" alt="" class="avatar-img">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="row g-6">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <h4 class="fw-bold">William Pearson</h4>
+                                <p>Enter your password to <br> unlock the screen</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="lockscreen-password"
+                                       placeholder="Password">
+                                <label for="lockscreen-password">Password</label>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn btn-block btn-lg btn-primary w-100" type="submit">Unlock</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div class="text-center mt-8">
+                Not you? Return <a href="{% url 'auth_signin' %}">Sign in.</a>
+            </div>
+
+        </div>
+    </div> <!-- / .row -->
+{% endblock %}

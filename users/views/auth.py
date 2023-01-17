@@ -12,3 +12,7 @@ class UserSignInView(TemplateView):
 
 class UserResetPasswordView(TemplateView):
     template_name = 'users/auth/reset-password.html'
+
+
+class UserLockScreenView(TemplateView):
+    template_name = 'users/lockscreen.html'
