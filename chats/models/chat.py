@@ -11,4 +11,4 @@ class Group(BaseModel):
     username = models.CharField(max_length=32, unique=True, blank=True, null=True)
     is_private = models.BooleanField(default=False)
     owner = models.ForeignKey('users.User', models.SET_NULL, null=True, blank=True)
-    user = ManyToManyField('users.User')
+    member = ManyToManyField('users.User')
