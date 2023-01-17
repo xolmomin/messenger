@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+
+    <title>{% block title %}
+        Messenger - 2.2.0
+    {% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon/favicon.ico' %}" type="image/x-icon">
+    <link class="css-lt" rel="stylesheet" href="{% static 'assets/css/template.bundle.css' %}"
+          media="(prefers-color-scheme: light)">
+    <link class="css-dk" rel="stylesheet" href="{% static 'assets/css/template.dark.bundle.css' %}"
+          media="(prefers-color-scheme: dark)">
+    <script>
+        if (localStorage.getItem('color-scheme')) {
+            let scheme = localStorage.getItem('color-scheme');
+
+            const LTCSS = document.querySelectorAll('link[class=css-lt]');
+            const DKCSS = document.querySelectorAll('link[class=css-dk]');
+
+            [...LTCSS].forEach((link) => {
+                link.media = (scheme === 'light') ? 'all' : 'not all';
+            });
+
+            [...DKCSS].forEach((link) => {
+                link.media = (scheme === 'dark') ? 'all' : 'not all';
+            });
+        }
+    </script>
+</head>
+<body class="bg-light">
+<div class="container">
+    {% block main_content %}
+
+    {% endblock %}
+</div>
+<script src="{% static 'assets/js/vendor.js' %}"></script>
+<script src="{% static 'assets/js/template.js' %}"></script>
+</body>
+</html>
