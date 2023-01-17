@@ -1,1 +1,1 @@
-from chats.models.chat import Group
+from chats.models.chat import Group, GroupUser
