@@ -1,3 +1,3 @@
-make mig:
-	./manage.py makemigrations
-	./manage.py migrate
+mig:
+	python3 manage.py makemigrations
+	python3 manage.py migrate
