@@ -1,8 +1,7 @@
 from django.db import models
 from shared.models.base import BaseModel
 
-
-class Group(BaseModel):
+class Group(models.Model):
     name = models.CharField(max_length=155)
     image = models.ImageField(upload_to='groups/', default='groups/default.jpg')
     bio = models.CharField(max_length=255)
