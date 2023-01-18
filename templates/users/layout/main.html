@@ -1,6 +1,6 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -15,6 +15,10 @@
           media="(prefers-color-scheme: light)">
     <link class="css-dk" rel="stylesheet" href="{% static 'assets/css/template.dark.bundle.css' %}"
           media="(prefers-color-scheme: dark)">
+    <!-- Font -->
+    <link rel="preconnect" href="link=https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700" rel="stylesheet">
+
     <script>
         if (localStorage.getItem('color-scheme')) {
             let scheme = localStorage.getItem('color-scheme');
@@ -32,12 +36,11 @@
         }
     </script>
 </head>
-<body class="bg-light">
-<div class="container">
-    {% block main_content %}
+{#<body class="bg-light">#}
+<body>
+{% block main_content %}
 
-    {% endblock %}
-</div>
+{% endblock %}
 <script src="{% static 'assets/js/vendor.js' %}"></script>
 <script src="{% static 'assets/js/template.js' %}"></script>
 </body>

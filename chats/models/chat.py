@@ -1,7 +1,5 @@
 from django.db import models
-from django.db.models import ManyToManyField, ForeignKey
-
-from shared.models import BaseModel
+from shared.models.base import BaseModel
 
 
 class Group(BaseModel):
@@ -11,9 +9,9 @@ class Group(BaseModel):
     username = models.CharField(max_length=32, unique=True, blank=True, null=True)
     is_private = models.BooleanField(default=False)
     owner = models.ForeignKey('users.User', models.SET_NULL, null=True, blank=True)
-    members = ManyToManyField('users.User', 'members', through='chats.Members')
+    members = models.ManyToManyField('users.User', 'members', through='chats.ChatMembers')
 
 
-class Members(models.Model):
-    group = ForeignKey('chats.Group', models.CASCADE, 'group')
-    member = ForeignKey('users.User', models.CASCADE, 'member')
+class ChatMembers(models.Model):
+    group = models.ForeignKey('chats.Group', models.CASCADE, 'group')
+    member = models.ForeignKey('users.User', models.CASCADE, 'member')

@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 
 
-#  TODO: Editing later / because i can't add ""Devise model"" / users add manually
+#  TODO: Editing later / because i can't add ""Device model"" / users add manually
 class UserSignUpView(TemplateView):
     template_name = 'users/auth/signup.html'
 
