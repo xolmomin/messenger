@@ -1,6 +1,7 @@
 from django.urls import path
 
-from users.views import IndexView, ChatDirectView, ChatGroupView, NewChatView, UserSignUpView, UserSignInView, UserResetPasswordView
+from users.views import IndexView, ChatDirectView, ChatGroupView, NewChatView, UserSignUpView, UserSignInView, \
+    UserResetPasswordView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
