@@ -23,8 +23,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'shared.apps.SharedConfig',
 
-    # Third-party apps
-    'fontawesomefree',
+    # # Third-party apps
+    # 'fontawesomefree',
 ]
 
 AUTH_USER_MODEL = 'users.User'
