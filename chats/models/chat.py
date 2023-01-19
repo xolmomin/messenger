@@ -1,4 +1,6 @@
 from django.db import models
+from django_resized import ResizedImageField
+
 from shared.models.base import BaseModel
 
 class Group(models.Model):
@@ -14,3 +16,7 @@ class Group(models.Model):
 class ChatMembers(models.Model):
     group = models.ForeignKey('chats.Group', models.CASCADE, 'group')
     member = models.ForeignKey('users.User', models.CASCADE, 'member')
+
+
+class CreateChat(models.Model):
+    image = ResizedImageField(size=[100, 150], crop=['middle', 'center'], upload_to='whatever')
