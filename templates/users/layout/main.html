@@ -19,6 +19,10 @@
     <link rel="preconnect" href="link=https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700" rel="stylesheet">
 
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    {% block extrastyle %}{% endblock %}
     <script>
         if (localStorage.getItem('color-scheme')) {
             let scheme = localStorage.getItem('color-scheme');

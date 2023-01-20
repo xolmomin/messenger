@@ -1,1 +1,1 @@
-from users.forms.auth import SignUpGetVerificationForm, SignUpVerifyForm
+from users.forms.auth import SignUpGetVerificationForm, SignUpForm

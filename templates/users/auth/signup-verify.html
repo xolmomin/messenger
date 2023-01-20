@@ -1,9 +1,27 @@
 {% extends 'users/layout/main.html' %}
+{% block extrastyle %}
+    <style>
+        .fa-pen-to-square, #countdown {
+            position: absolute;
+            top: 33%;
+            right: 6%;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
+        #countdown {
+            font-size: 15px;
+            cursor: default;
+        }
+    </style>
+{% endblock %}
 {% block main_content %}
     <div class="container">
         <div class="row align-items-center justify-content-center min-vh-100 gx-0">
-
+            <form id="resend-activation-code" action="{% url 'auth_signup' %}" method="post">
+                {% csrf_token %}
+                <input name="email" value="{{ email }}" hidden></input>
+            </form>
             <div class="col-12 col-md-5 col-lg-4">
                 <div class="card card-shadow border-0">
                     <div class="card-body">
@@ -13,19 +31,28 @@
                                 <div class="col-12">
                                     <div class="text-center">
                                         <h3 class="fw-bold mb-2">Sign Up</h3>
-                                        <p>{{ email }}</p>
+                                        <p>Verification code wil sent your email address <br> please
+                                            <b>Check your Email</b></p>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="signup-email" name="email" maxlength="8">
+                                        <input type="email" class="form-control" id="signup-email" value="{{ email }}"
+                                               name="email" disabled>
+                                        <label for="signup-email">Email</label>
+                                        <i class="fa fa-pen-to-square" onclick="delete_email_cookie()"></i>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="signup-email" name="email"
+                                               pattern="\d" maxlength="6">
                                         <label for="signup-email">Code</label>
+                                        <p id="countdown">01 : 00</p>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-block btn-lg btn-primary w-100" type="submit">Verify</button>
-                                    <p class="form-text">Verification code wil sent your email address check your
-                                        email</p>
                                 </div>
                             </div>
                         </form>
@@ -38,4 +65,16 @@
             </div>
         </div>
     </div>
+    <script>
+        function resend_activation_code() {
+            let form = document.getElementById('resend-activation-code')
+            console.log(form)
+            form.submit()
+        }
+
+        function delete_email_cookie() {
+            document.cookie = "email="
+            document.location.reload()
+        }
+    </script>
 {% endblock %}

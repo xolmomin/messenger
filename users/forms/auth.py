@@ -2,8 +2,8 @@ from django.forms import Form, EmailField, CharField
 
 
 class SignUpGetVerificationForm(Form):
+    pass
+
+
+class SignUpForm(Form):
     email = EmailField()
-
-
-class SignUpVerifyForm(SignUpGetVerificationForm):
-    code = CharField(max_length='8')

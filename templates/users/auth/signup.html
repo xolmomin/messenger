@@ -18,13 +18,15 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="signup-email" name="email" placeholder="Email">
+                                        <input type="email" class="form-control" id="signup-email" name="email"
+                                               placeholder="Email">
                                         <label for="signup-email">Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-block btn-lg btn-primary w-100" type="submit">Send
-                                        Verification Code
+                                    <button class="btn btn-block btn-lg btn-primary w-100" type="submit"
+                                            onclick="set_email_cookie()">
+                                        Send Verification Code
                                     </button>
                                     <p class="form-text">Verification code wil sent your email address check your
                                         email</p>
@@ -40,4 +42,10 @@
             </div>
         </div>
     </div>
+    <script>
+        function set_email_cookie() {
+            let email = document.getElementById('signup-email').value
+            document.cookie = "email=" + email
+        }
+    </script>
 {% endblock %}
